@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Beyond Speech Generation: a research proposal on thread-aware conversational intelligence in large language models by Pranav Patil, Independent Researcher.">
+<meta name="author" content="Pranav Patil">
+<title>Beyond Speech Generation — Pranav Patil</title>
+<style>
+:root{color-scheme:dark;--bg:#080d18;--panel:#101a2b;--line:#24344d;--text:#edf3ff;--muted:#a8b6ca;--blue:#9cc5ff;--cyan:#77e0d0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#152746 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1020px,calc(100% - 40px));margin:auto}
+nav{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:750;letter-spacing:.04em}.navlink{font-size:14px;color:var(--muted);margin-left:24px}
+.hero{padding:105px 0 85px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.19em;color:var(--cyan);font-weight:700}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.045em;max-width:880px;margin:22px 0}
+.sub{font-size:clamp(19px,3vw,26px);line-height:1.35;color:#c3d3e9;max-width:800px}
+.summary{max-width:760px;color:var(--muted);font-size:17px;margin-top:24px}
+.author{margin-top:32px;color:var(--muted)}.author strong{color:var(--text);font-size:18px}.pill{display:inline-block;border:1px solid #34516e;border-radius:999px;padding:5px 11px;font-size:12px;color:#c5ddff;margin-top:12px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:8px;background:var(--blue);color:#07101d;font-weight:750}.btn.secondary{background:transparent;border:1px solid #536783;color:var(--text)}
+section{padding:54px 0;border-top:1px solid var(--line)}h2{font-size:27px;letter-spacing:-.02em;margin:0 0 16px}p{color:var(--muted);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:25px}.card{background:linear-gradient(145deg,#132139,#0d1626);border:1px solid var(--line);border-radius:13px;padding:22px}.card h3{font-size:17px;margin:0 0 8px}.card p{font-size:14px;margin:0}
+.status{border-left:3px solid #d9ae68;background:#241f18;padding:18px 20px;border-radius:0 9px 9px 0;color:#eadfc9}.status strong{color:#fff0d1}
+footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#8494aa;font-size:13px}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:650px){.hero{padding:72px 0 60px}.grid{grid-template-columns:1fr}.navlink{margin-left:12px;font-size:12px}.brand{font-size:13px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;width:100%"><a class="brand" href="#">INDEPENDENT RESEARCH</a><div><a class="navlink" href="#research">Research</a><a class="navlink" href="#framework">Framework</a><a class="navlink" href="#paper">Paper</a></div></div></nav>
+<main class="wrap">
+<header class="hero">
+<div class="eyebrow">Research proposal · Conversational AI · 2026</div>
+<h1>Beyond Speech<br>Generation</h1>
+<div class="sub">Toward Thread-Aware Conversational Intelligence in Large Language Models</div>
+<p class="summary">A framework for managing, pausing and resuming multiple interleaved conversational threads while preserving reasoning continuity.</p>
+<div class="author"><strong>Pranav Patil</strong><br>Independent Researcher<br><a href="https://www.linkedin.com/in/pranav-patil-78825621b/" target="_blank" rel="noopener">LinkedIn profile ↗</a><br><span class="pill">Version 1.0 · 3 November 2026</span></div>
+<div class="actions"><a class="btn" href="Research_Paper_Pranav_Patil.pdf" target="_blank" rel="noopener">Read the research paper ↗</a><a class="btn secondary" href="Research_Paper_Pranav_Patil.pdf" download>Download PDF ↓</a></div>
+</header>
+<section id="research">
+<div class="eyebrow">01 / The research problem</div><h2>Conversation is not a single queue.</h2>
+<p>Human conversations naturally contain temporary detours. A person can pause a complex explanation to ask a quick question, receive an answer, add a constraint or correction, and return to the larger discussion without reconstructing it from the beginning.</p>
+<p>Conversational AI can preserve the transcript yet still lose the unfinished structure of an answer: what has already been delivered, what remains unresolved, and how a side exchange should change the next response.</p>
+<div class="card"><h3>Central research question</h3><p>Can an AI system maintain multiple active conversational threads and resume an interrupted complex discussion from the correct reasoning point after handling temporary side questions?</p></div>
+</section>
+<section id="framework">
+<div class="eyebrow">02 / Proposed framework</div><h2>Thread-Aware Conversational Architecture (TACA)</h2>
+<p>TACA is a proposed orchestration layer around a conversational language model and, in a later implementation, a streaming speech interface.</p>
+<div class="grid">
+<div class="card"><h3>01 · Streaming interruption gate</h3><p>Detects user input during generation and safely pauses or stops output.</p></div>
+<div class="card"><h3>02 · Intent and thread classifier</h3><p>Distinguishes clarifications, side questions, added context, corrections and permanent topic changes.</p></div>
+<div class="card"><h3>03 · Thread graph and state store</h3><p>Maintains parent and side threads, their relationships and lifecycle states.</p></div>
+<div class="card"><h3>04 · Answer checkpoint manager</h3><p>Tracks delivered answer units, unresolved obligations, assumptions and the next planned response unit.</p></div>
+<div class="card"><h3>05 · Relevance-aware resumption</h3><p>Decides whether to resume and incorporates side-thread information only when it genuinely affects the parent task.</p></div>
+<div class="card"><h3>06 · Interruptible response generation</h3><p>Continues from the next unresolved unit rather than restarting the original answer.</p></div>
+</div>
+</section>
+<section id="paper">
+<div class="eyebrow">03 / Manuscript</div><h2>Read the research proposal</h2>
+<p>The manuscript formalises the problem, reviews related work, proposes the TACA architecture, defines research questions and hypotheses, and outlines a benchmark and evaluation plan.</p>
+<div class="status"><strong>Research status:</strong> This is a pre-prototype conceptual proposal. The prototype has not yet been implemented and no experimental results are claimed. The proposed architecture and hypotheses require empirical validation.</div>
+<div class="actions"><a class="btn" href="Research_Paper_Pranav_Patil.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn secondary" href="Research_Paper_Pranav_Patil.pdf" download>Download PDF ↓</a></div>
+</section>
+<section>
+<div class="eyebrow">04 / Author</div><h2>Pranav Patil</h2><p>Independent Researcher</p><p>For research discussions and professional contact: <a href="https://www.linkedin.com/in/pranav-patil-78825621b/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+</section>
+</main>
+<footer><div class="wrap footrow"><span>© 2026 Pranav Patil. All rights reserved.</span><span>Beyond Speech Generation · Research Proposal</span></div></footer>
+</body></html>
