@@ -32,13 +32,13 @@ This is a **pre-prototype research proposal**. The prototype has not yet been im
 
 ## Read the paper
 
-The uploaded research manuscript is available here:
+The research manuscript is available here:
 
-[`Beyond Speech Genration - A Research Paper by Pranav Patil.pdf`](Beyond%20Speech%20Genration%20-%20A%20Research%20Paper%20by%20Pranav%20Patil.pdf)
+[`Research_Paper_Pranav_Patil.pdf`](Research_Paper_Pranav_Patil.pdf)
 
 ## Website
 
-The research landing page is published from [`index.html`](index.html). Once GitHub Pages is enabled, the site will be available at:
+The research landing page is published from [`index.html`](index.html). The site is published at:
 
 https://patilpranav13-coder.github.io/Beyond-Speech-Genration---A-Research-Paper-by-Pranav-Patil/
 
