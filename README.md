@@ -34,7 +34,7 @@ This is a **pre-prototype research proposal**. The prototype has not yet been im
 
 The uploaded research manuscript is available here:
 
-[`Beyond Speech Genration - A Research Paper by Pranav Patil.pdf`](Beyond Speech Genration - A Research Paper by Pranav Patil.pdf)
+[`Beyond Speech Genration - A Research Paper by Pranav Patil.pdf`](Beyond%20Speech%20Genration%20-%20A%20Research%20Paper%20by%20Pranav%20Patil.pdf)
 
 ## Website
 
