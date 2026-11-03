@@ -32,9 +32,9 @@ This is a **pre-prototype research proposal**. The prototype has not yet been im
 
 ## Read the paper
 
-The PDF will be available here after it is uploaded to the repository root with this exact filename:
+The uploaded research manuscript is available here:
 
-[`Research_Paper_Pranav_Patil.pdf`](Research_Paper_Pranav_Patil.pdf)
+[`Beyond Speech Genration - A Research Paper by Pranav Patil.pdf`](Beyond Speech Genration - A Research Paper by Pranav Patil.pdf)
 
 ## Website
 
